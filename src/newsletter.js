@@ -21,12 +21,15 @@ document.querySelector('#newsletter-btn').addEventListener('click', evt => {
     content: [{ 'type': 'text/html', 'value': content }],
   };
 
+  // Disabled this block because security reasons!!!
+  // We must to write a simple api that have an endpoint to send transactional emails using sendgrid
+  /*
   axios.post(
     'https://api.sendgrid.com/v3/mail/send',
     payload,
     {
       headers: {
-        authorization: "Bearer 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"
+        authorization: "Bearer my-api-key"
       }
     })
     .then(function (response) {
@@ -37,5 +40,5 @@ document.querySelector('#newsletter-btn').addEventListener('click', evt => {
       // handle error
       console.log(error);
     });
+  */
 });
-
