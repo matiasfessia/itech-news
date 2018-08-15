@@ -117,7 +117,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: 'My awesome service',
-      template: './src/index.html',
+      template: './src/index.handlebars',
       minify: !isDevelopment && {
         html5: true,
         collapseWhitespace: true,
