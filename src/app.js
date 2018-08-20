@@ -1,3 +1,6 @@
 import './style.scss';
-import './newsletter.js';
-import './articles';
+import './header/header.js';
+import './newsletter/newsletter.js';
+
+import { renderSection } from './header/header.js';
+renderSection('home');

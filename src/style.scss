@@ -116,7 +116,7 @@ header {
   }
 }
 
-.newsletter {
+.newsletter, .contact {
   grid-area: sign-up;
   h2 {
     font-family: $heading-font;
@@ -127,7 +127,7 @@ header {
     @media screen and (min-width: $desktop) {
       flex-direction: row;
     }
-    input {
+    input, textarea {
       margin: 1em 0;
       flex-grow: 1;
       height: 2em;
@@ -136,6 +136,9 @@ header {
       border-left: 3px solid $accent;
       box-shadow: 2px 3px 12px $gray;
       font-size: 16px;
+    }
+    textarea {
+      height: 4em;
     }
     button {
       margin: 1em 0;
