@@ -1,9 +1,10 @@
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Variables */
-$body-font: 'IBM Plex Sans', sans-serif;
-$heading-font: 'IBM Plex Sans Condensed', sans-serif;
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'Roboto', sans-serif;
 $base-font-size: 16px;
 $font-color: #252227;
 $gray: #eee;
@@ -25,27 +26,7 @@ body {
   color: $font-color;
 }
  
-div.wrapper {
-  display: grid;
-  width: 100vw;
-  grid-template-areas: "content" "visual";
-  grid-template-rows: 61.8034% 38.1966%;
-  text-align: center;
-  @media screen and (min-width: $tablet){
-    grid-template-areas: "content visual";
-    grid-template-columns: 61.8034% 38.1966%;
-    grid-template-rows: 1fr 0fr;
-    height: 100vh;
-  }
 
-  @media screen and (min-width: $desktop){
-    grid-template-areas: "content visual";
-    grid-template-columns: 61.8034% 38.1966%;
-    grid-template-rows: 1fr 0fr;
-    height: 100vh;
-    text-align: left;
-  }
-}
 
 a {
   text-decoration: none;
@@ -56,23 +37,12 @@ a {
   }
 }
 
-.content {
+.site-wrapper {
   grid-area: content;
   display: grid;
-  grid-template-areas: "header" "articles" "sign-up" "social";
+  grid-template-areas: "header" "section-wrapper" "sign-up" "social";
   grid-template-rows: auto;
   padding: 0 2em;
-}
-
-.visual {
-  grid-area: visual;
-  background-color: $gray;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 50%;
-  @media screen and (min-width: $tablet) {
-    background-image: url('images/scott-webb-207709-unsplash.jpg');
-  }
 }
 
 header {

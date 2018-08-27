@@ -7,22 +7,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ITECH NEWS</title>
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  {{!-- <base href="/"> --}}
 </head>
 
 <body>
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:600|IBM+Plex+Sans:400,500|IBM+Plex+Serif" rel="stylesheet">
-  <div class="wrapper">
-    <div class="content">
-      {{> header/header }}
-      <div class="section-content"></div>
-      {{> newsletter/newsletter }}
-      {{> footer/footer }}
-    </div>
-    <div class="visual"></div>
+  <div class="site-wrapper">
+    {{> header/header }}
+    <div class="section-wrapper"></div>
+    {{> newsletter/newsletter }}
+    {{> footer/footer }}
   </div>
 </body>
-
 </html>

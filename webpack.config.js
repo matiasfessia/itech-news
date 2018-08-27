@@ -19,6 +19,7 @@ module.exports = {
     port: 3000,
     open: true,
     contentBase: path.join(__dirname, "./src"),
+    historyApiFallback: true,
   },
   module: {
     rules: [
