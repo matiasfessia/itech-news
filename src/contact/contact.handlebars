@@ -1,12 +1,15 @@
 <section class="contact">
-  <h2>Ponte en contacto con nosotros</h2>
-  <p>Completa el siguiente formulario y nos estaremos comunicando a la brevedad.</p>
+  <h2>{{{contact-title}}}</h2>
+  {{{contact-text}}}
   <div class="form">
     <div class="form-wrapper">
       <input id="contact-name" type="text" placeholder="tu nombre">
       <input id="contact-email" type="text" placeholder="tu@email.com">
       <textarea id="contact-message" type="text" placeholder="tu mensaje"></textarea>
-      <button id="contact-btn" type="submit">enviar</button>
+      <button id="contact-btn" type="submit">
+        <span class="contact-btn-text">Enviar</span>
+        <span class="contact-btn-spinner hidden">Procesando</span>
+      </button>
     </div>
   </div>
 </section>

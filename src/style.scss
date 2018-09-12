@@ -89,10 +89,25 @@ header {
   }
 }
 
-.articles {
+.home {
   margin-top: 50px;
   article {
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    h1 {
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 12px;
+    }
+    .picture {
+      min-height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
 
@@ -180,5 +195,83 @@ header {
 .contact {
   .form-wrapper {
     flex-direction: column;
+  }
+}
+.hidden {
+  display: none;
+}
+#loading {
+  text-align: center;
+  margin: 25% 0;
+  .spinner {
+    position: relative;
+    height: 20px;
+    div {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: -20px;
+      top: 0;
+      background-color: #333;
+      border-radius: 50%;
+      animation: move 4s infinite cubic-bezier(.2,.64,.81,.23);
+      &:nth-child(2) {
+        animation-delay: 150ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 300ms;
+      }
+      &:nth-child(4) {
+        animation-delay: 450ms;
+      }
+    }
+  }
+  h1 {
+    font-size: 16px;
+  }
+}
+
+@keyframes move {
+  0% {left: 0%;}
+  75% {left:100%;}
+  100% {left:100%;}
+}
+
+.newsletter-btn-spinner {
+  text-align: center;
+}
+
+.spnewsletter-btn-spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: rgb(231, 16, 16);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.newsletter-btn-spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.newsletter-btn-spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
   }
 }
